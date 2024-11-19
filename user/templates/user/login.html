@@ -1,0 +1,35 @@
+{% extends 'user/base.html' %}
+{% block content %}
+{% load crispy_forms_tags %}
+
+<!-- Top Heading: Smart Food Diary -->
+<div class="header-container">
+    <h1 class="header-title">Smart Food Diary</h1>
+</div>
+
+<!-- Login Section -->
+<div class="login-container">
+    <h2 class="login-heading">Welcome Back! <br> Log in to your account</h2>
+
+    <form method="post" class="login-form">
+        {% if messages %}
+        <div class="alert-container">
+            {% for message in messages %}
+            <div class="alert alert-{{ message.tags }}" role="alert">
+                {{ message }}
+            </div>
+            {% endfor %}
+        </div>
+        {% endif %}
+        {% csrf_token %}
+        <label class="form-label">Username</label>
+        {{ form.username|as_crispy_field }}
+        <label class="form-label">Password</label>
+        {{ form.password|as_crispy_field}}
+        <button type="submit" class="btn btn-primary btn-block">Submit</button>
+    </form>
+    <h6 class="mt-2 text-center">
+        Don't have an account? <a href="{% url 'register' %}" class="signup-link">Register</a>
+    </h6>
+</div>
+{% endblock %}

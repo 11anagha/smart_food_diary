@@ -1,0 +1,276 @@
+nav {
+    background-color: #454a4f; /* Light background for the navbar */
+    padding: 10px 10px; /* Add padding for spacing around the navbar */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+.nav {
+    list-style-type: none; /* Remove default list styling */
+    margin: 0;
+    padding: 3px;
+    display: flex; /* Flexbox to align items in a row */
+    justify-content: flex-end; /* Align items to the right */
+}
+
+/* Styling individual nav items */
+.nav-item {
+    margin-right: 20px; /* Add space between items */
+}
+
+/* Styling the links */
+.nav-link {
+    color: #007bff; /* Blue color for links */
+    text-decoration: none; /* Remove underline */
+    font-weight: 500; /* Slightly bold text */
+    font-size: 16px; /* Adjust the size for better readability */
+    transition: all 0.3s ease; /* Smooth transition effect for hover */
+}
+
+/* Active link style */
+.nav-link.active {
+    color: white; /* White color for active link */
+    background-color: #007bff; /* Blue background for active link */
+    padding: 8px 16px; /* Add padding to the active link */
+    border-radius: 4px; /* Rounded corners for the active link */
+}
+
+/* Hover effect for links */
+.nav-link:hover {
+    color: #06468a; /* Darker blue on hover */
+    text-decoration: underline; /* Underline the link on hover */
+}
+
+/* Style for the login container */
+/* General Body Styling */
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Header Section */
+.header-container {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.header-title {
+    font-size: 48px;
+    font-weight: 800;
+    color: #007bff;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Login Container */
+.login-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    background: linear-gradient(135deg, #6c757d, #343a40); /* Gradient background */
+    color: white;
+    width: 100%;
+}
+
+/* Custom Login Heading */
+.login-heading {
+    font-size: 28px;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 30px;
+    color: #ffffff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Alert Container */
+.alert-container {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.alert {
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+/* Login Form Styling */
+.login-form {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px; /* Increased width */
+}
+
+/* Styling for each form field */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-field {
+    margin-bottom: 20px;
+}
+
+.form-control {
+    padding: 12px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+/* Submit Button Styling */
+.btn-block {
+    width: 100%;
+    padding: 15px;
+    font-size: 18px;
+    border-radius: 5px;
+}
+
+/* Focus state for form fields */
+.form-control:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+/* Responsive Design */
+@media (max-width: 576px) {
+    .login-heading {
+        font-size: 22px;
+    }
+
+    .login-form {
+        padding: 25px;
+        max-width: 100%;
+    }
+
+    .form-field {
+        margin-bottom: 15px;
+    }
+}
+.form-label {
+    font-size: 18px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 8px;
+    display: block; /* Ensure the label is on a new line */
+}
+.signup-link {
+    text-decoration: none;
+    font-weight: 600;
+    color: #007bff;
+}
+
+.signup-link:hover {
+    color: #0056b3; /* Darker blue on hover */
+}
+/* General Body Styling */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Registration Container */
+.registration-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f8f9fa;
+    padding: 20px;
+}
+
+.header-title {
+    font-size: 36px;
+    font-weight: 700;
+    color: #007bff;
+    margin-bottom: 30px;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Alert Message Container */
+.alert-container {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.alert {
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+/* Form Styling */
+.registration-form {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px;
+}
+
+/* Form Group */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-label {
+    font-size: 18px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 8px;
+    display: block;
+    text-align: center;
+}
+
+/* Form Fields */
+.form-field .form-control {
+    padding: 12px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    width: 100%;
+}
+
+/* Focus state for form fields */
+.form-control:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+/* Submit Button */
+.btn-block {
+    width: 100%;
+    padding: 15px;
+    font-size: 18px;
+    border-radius: 5px;
+}
+
+/* Link Styling */
+.login-link {
+    text-decoration: none;
+    font-weight: 600;
+    color: #007bff;
+}
+
+.login-link:hover {
+    color: #0056b3; /* Darker blue on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 576px) {
+    .registration-form {
+        padding: 25px;
+        max-width: 100%;
+    }
+
+    .form-field {
+        margin-bottom: 15px;
+    }
+
+    .header-title {
+        font-size: 28px;
+    }
+}

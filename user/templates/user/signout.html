@@ -1,0 +1,10 @@
+{% extends 'user/base.html' %}
+
+{% block content %}
+<div class="container text-center mt-5">
+    <h2 class="display-4" style="color: #ff6347;">You have been Signed Out</h2>
+    <p class="lead">We hope to see you back soon! <br> Click below to Sign In again.</p>
+    <a href="{% url 'login' %}" class="btn btn-primary btn-lg" style="text-decoration: none;">Sign In Again</a>
+</div>
+{% endblock content %}
+

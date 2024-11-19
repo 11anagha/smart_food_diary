@@ -1,0 +1,102 @@
+{% extends 'user/base.html' %}
+
+{% block content %}
+{% load crispy_forms_tags %}
+
+
+<div class="registration-container">
+    <h1 class="header-title">Create Your Account</h1>
+
+    <form method="POST" class="registration-form">
+        {% if messages %}
+            <div class="alert-container">
+                {% for message in messages %}
+                <div class="alert alert-{{ message.tags }}" role="alert">
+                    {{ message }}
+                </div>
+                {% endfor %}
+            </div>
+        {% endif %}
+        {% csrf_token %}
+        
+        <!-- Username -->
+        <div class="form-group">
+          <label for="username" class="form-label">Username</label>
+          <div class="form-field">
+              {{ form.username|as_crispy_field }}
+          </div>
+        </div>
+
+        <!-- Email -->
+        <div class="form-group">
+            <label for="email" class="form-label">Email</label>
+            <div class="form-field">
+                {{ form.email|as_crispy_field }}
+            </div>
+        </div>
+        
+        <div class="form-group">
+            <label for="name" class="form-label">Full Name</label>
+            <div class="form-field">
+                {{ form.name|as_crispy_field }}
+            </div>
+        </div>
+
+        <!-- Age -->
+        <div class="form-group">
+            <label for="age" class="form-label">Age</label>
+            <div class="form-field">
+                {{ form.age|as_crispy_field }}
+            </div>
+        </div>
+
+        <!-- Gender -->
+        <div class="form-group">
+            <label for="gender" class="form-label">Gender</label>
+            <div class="form-field">
+                {{ form.gender|as_crispy_field }}
+            </div>
+        </div>
+
+        <!-- Password -->
+        <div class="form-group">
+            <label for="password1" class="form-label">Password</label>
+            <div class="form-field">
+                {{ form.password1|as_crispy_field }}
+            </div>
+        </div>
+
+        <!-- Confirm Password -->
+        <div class="form-group">
+            <label for="password2" class="form-label">Confirm Password</label>
+            <div class="form-field">
+                {{ form.password2|as_crispy_field }}
+            </div>
+        </div>
+        
+        <!-- Calorie Goal -->
+        <div class="form-group">
+            <label for="calorie_goal" class="form-label">Calorie Goal</label>
+            <div class="form-field">
+                {{ form.calorie_goal|as_crispy_field }}
+            </div>
+        </div>
+
+        <!-- Nutrient Goal -->
+        <div class="form-group">
+            <label for="nutrient_goal" class="form-label">Nutrient Goal</label>
+            <div class="form-field">
+                {{ form.nutrient_goal|as_crispy_field }}
+            </div>
+        </div>
+
+        <!-- Submit Button -->
+        <button type="submit" class="btn btn-primary btn-block">Register</button>
+
+        <!-- Login Redirect Link -->
+        <h6 class="mt-2 text-center">
+            Already have an account? <a href="{% url 'login' %}" class="login-link">LOGIN</a>
+        </h6>
+    </form>
+</div>
+{% endblock %}
