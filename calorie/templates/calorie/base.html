@@ -4,19 +4,29 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap demo</title>
+    <title>SMART FOOD DIARY</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="stylesheet" href="{% static 'user/style.css' %}">
+    <link rel="stylesheet" href="{% static 'calorie/style.css' %}">
   </head>
   <body>
-    <nav>
-        <ul class="nav justify-content-end">
-            <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="{% url 'signout' %}">Logout</a>
-            </li>
-        </ul>
-    </nav>
-    <h1>Smart Food Diary</h1>
+    <button class="open-btn" onclick="openNav()"> ☰ </button>
+    <div id="mySidenav" class="sidenav">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+      <a href="{% url 'home' %}">Home</a>
+      <a href="{% url 'signout' %}">Logout</a>
+    </div>
+    <script>
+      /* Function to open the sidebar */
+      function openNav() {
+          document.getElementById("mySidenav").style.width = "250px";
+      }
+
+      /* Function to close the sidebar */
+      function closeNav() {
+          document.getElementById("mySidenav").style.width = "0";
+      }
+    </script>
+    <h1 style="color: white; text-align: center; font-family: 'Arial'; sans-serif; font-size: 3rem; font-weight: bold; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); margin: 0;">Smart Food Diary</h1>
     {% block content %} {% endblock %}
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
   </body>

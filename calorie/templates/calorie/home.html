@@ -1,4 +1,36 @@
 {% extends 'calorie/base.html' %}
 {% block content %}
-<h1>Home page</h1>
+{% load static %}
+<style>
+    body {
+    background: url({% static "assets/images/homee.jpg" %});
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    }
+</style>
+<div class="container text-center vh-100 d-flex flex-column justify-content-center align-items-center">
+    <div class="dashboard p-5 shadow rounded">
+        <h1 class="homepage-title">Welcome to the Calorie Tracker!</h1>
+        <p class="homepage-description">
+            Track your meals, analyze their nutritional content, and stay on top of your health goals.
+        </p>
+        <div class="upload-section mt-4">
+            <p>Upload an image to identify food and analyze its nutritional content:</p>
+            <button type="submit" class="btn btn-primary">Upload</button>
+        </div>
+        <div class="goal-section mt-5">
+            <h3>Set Your Goals</h3>
+            <div class="form-group">
+                <label for="calorie-goal">Daily Calorie Goal:</label>
+                <input type="number" id="calorie-goal" name="calorie_goal" class="form-control mb-3" placeholder="e.g., 2000" required>
+            </div>
+            <div class="form-group">
+                <label for="nutrient-goal">Daily Nutrient Goal (e.g., Protein in grams):</label>
+                <input type="text" id="nutrient-goal" name="nutrient_goal" class="form-control mb-3" placeholder="e.g., Protein: 50g, Carbs: 250g" required>
+            </div>
+            <button type="submit" class="btn btn-success">Save Goals</button>
+        </div>
+    </div>
+</div>
 {% endblock %}

@@ -1,41 +1,96 @@
-nav {
-    background-color: #454a4f; /* Light background for the navbar */
-    padding: 10px 10px; /* Add padding for spacing around the navbar */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-}
-.nav {
-    list-style-type: none; /* Remove default list styling */
-    margin: 0;
-    padding: 3px;
-    display: flex; /* Flexbox to align items in a row */
-    justify-content: flex-end; /* Align items to the right */
-}
-
-/* Styling individual nav items */
-.nav-item {
-    margin-right: 20px; /* Add space between items */
+.sidenav {
+    height: 100%; /* Full height */
+    width: 0; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    top: 0;
+    left: 0;
+    background-color: #111; /* Black background */
+    overflow-x: hidden; /* Disable horizontal scroll */
+    transition: 0.3s; /* Smooth opening effect */
+    padding-top: 60px; /* Add padding for content */
 }
 
-/* Styling the links */
-.nav-link {
-    color: #007bff; /* Blue color for links */
-    text-decoration: none; /* Remove underline */
-    font-weight: 500; /* Slightly bold text */
-    font-size: 16px; /* Adjust the size for better readability */
-    transition: all 0.3s ease; /* Smooth transition effect for hover */
+/* Links inside the sidebar */
+.sidenav a {
+    padding: 10px 15px;
+    text-decoration: none;
+    font-size: 20px;
+    color: white;
+    display: block;
+    transition: 0.3s;
+}
+.sidenav a:hover {
+    background-color: #575757;
 }
 
-/* Active link style */
-.nav-link.active {
-    color: white; /* White color for active link */
-    background-color: #007bff; /* Blue background for active link */
-    padding: 8px 16px; /* Add padding to the active link */
-    border-radius: 4px; /* Rounded corners for the active link */
+/* Close button styling */
+.sidenav .closebtn {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 25px;
+    color: white;
+    text-decoration: none;
+}
+.open-btn {
+    font-size: 20px;
+    cursor: pointer;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
 }
 
-/* Hover effect for links */
-.nav-link:hover {
-    color: #06468a; /* Darker blue on hover */
-    text-decoration: underline; /* Underline the link on hover */
+.open-btn:hover {
+    background-color: #111;
 }
 
+.homepage-description {
+    font-size: 1.2rem;
+    color: #7f8c8d;
+    margin: 10px 0 20px;
+}
+.dashboard {
+    background-color: #fff;
+    text-align: center;
+    width: 800px;
+    border-radius: 10px;
+}
+
+.homepage-title {
+    color: #007bff;
+    font-weight: bold;
+    margin-bottom: 15px;
+    margin-top:7px;
+}
+.homepage-description {
+    font-size: 18px;
+    color: #555;
+}
+
+.upload-section p {
+    font-size: 16px;
+    color: #333;
+}
+.btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #004085;
+}
+.goal-section {
+    text-align: left;
+    margin-top: 20px;
+}
+
+.goal-section h3 {
+    font-size: 24px;
+    color: #007bff;
+}
+
+.goal-section label {
+    font-weight: bold;
+    color: #555;
+}
+.goal-section .form-control {
+    max-width: 400px;
+    margin: 0 auto;
+}

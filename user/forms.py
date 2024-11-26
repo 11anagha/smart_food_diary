@@ -8,8 +8,6 @@ class RegistrationForm(UserCreationForm):
     age = forms.IntegerField()
     gender_choices = [('M', 'Male'), ('F', 'Female'), ('O', 'Other')]
     gender = forms.ChoiceField(choices=gender_choices)  # Use ChoiceField for choices
-    calorie_goal = forms.IntegerField()
-    nutrient_goal = forms.CharField(widget=forms.Textarea)  # Use Textarea widget for multi-line input
 
     class Meta:
         model = User  # Ensure this is the correct model
