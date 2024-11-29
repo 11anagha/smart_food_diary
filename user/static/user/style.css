@@ -10,7 +10,7 @@
 .login-container {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: normal;
     align-items: center;
     min-height: 100vh;
     padding: 20px;
@@ -22,9 +22,9 @@
     font-size: 28px;
     font-weight: 600;
     text-align: center;
-    margin-bottom: 30px;
+    margin-bottom: 40px;
     color: #ffffff;
-    font-family: Arial, sans-serif;
+    font-family: 'Georgia', serif;
 }
 
 /* Alert Container */
@@ -40,14 +40,21 @@
 
 /* Login Form Styling */
 .login-form {
-    background-color: #ffffff;
+    background-color: rgba(246, 243, 243, 0.05);
     padding: 40px;
     border-radius: 10px;
     box-shadow: 4px 4px 30px rgba(0, 0, 0, 0.3);
     width: 100%;
     max-width: 500px; /* Increased width */
 }
-
+.login-form:hover {
+    box-shadow: 0px 6px 40px rgba(0, 0, 0, 0.3); /* Stronger shadow on hover */
+    transform: translateY(-5px); /* Slight lift effect */
+}
+.login-form:active {
+    transform: translateY(0); /* Reset when clicked */
+    box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.2); /* Reset shadow */
+}
 /* Styling for each form field */
 
 .form-field {
@@ -291,4 +298,109 @@ p {
     width: 1000px;
     height: 500px;
     margin-top: 100px;
+}
+/* Contact page css */
+.lead{
+    color: white;
+}
+.header-section {
+    background-size: cover;
+    background-position: center;
+    padding: 130px 0; /* Adjust the padding as per your design */
+    position: relative;
+    text-align: center;
+}
+
+.header-section .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Dark overlay */
+}
+.header-section h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    z-index: 1;
+    margin-top: 47px;
+}
+
+.header-section p {
+    font-size: 1.25rem;
+    z-index: 1;
+}
+/* Contact and Social Media Cards */
+.card {
+    border-radius: 10px;
+    border: none;
+}
+
+.card-title {
+    color: #333;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+.text-justify {
+    text-align: justify;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.mt-5 {
+    margin-top: 3rem;
+}
+
+.mb-4 {
+    margin-bottom: 2rem;
+}
+
+/* List Group */
+.list-group {
+    list-style-type: none;
+    padding: 0;
+}
+
+.list-group-item {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin: 5px 0;
+}
+
+/* Buttons */
+.btn {
+    padding: 12px 20px;
+    font-size: 1.2rem;
+    border-radius: 5px;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+.btn-secondary {
+    background-color: #6c757d;
+    color: white;
+    text-decoration: none;
+}
+
+.btn-secondary:hover {
+    background-color: #5a6268;
+}
+
+.mx-2 {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.site-name {
+    color: #cf0505;
 }

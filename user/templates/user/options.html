@@ -6,25 +6,22 @@
 
 <style>
     body {
-        background: url({% static "assets/images/options.webp" %});
+        background: url("{% static 'assets/images/options.webp' %}");
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
     }
 </style>
 
-
-
 <div class="container text-center d-flex flex-column justify-content-center align-items-center vh-100">
     <div class="welcome-box">
-        <h1 class="mb-4" 
-            style="font-size: 3.5rem; font-weight: bold;  font-family: 'Poppins', sans-serif; 
-                   text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);">
-            
-            <span class="site-name" style="color: #10581c;">
-                Welcome to  Smart Food Diary
+        <h1 style="font-size: 3.5rem; font-weight: bold;font-family: 'Times New Roman', serif;margin-top: -20px;
+                   text-shadow: 2px 2px 8px rgba(3, 1, 1, 0.3);-webkit-transition: all 0.4s ease 0s; -o-transition: all 0.4s ease 0s; transition: all 0.4s ease 0s;">
+            <span class="site-name">
+                Welcome to Smart Food Diary
             </span>
         </h1>
+        <div style="border: outset; width: 600px; padding: 10px; margin-left: 200px;">
         <p class="mb-4" style="font-weight: bold;">Track your calories and nutrients effortlessly.</p>
 
         <div class="d-flex justify-content-center mb-3">
@@ -46,6 +43,8 @@
         <div class="mt-4">
             <a href="{% url 'learn_more' %}" class="btn btn-custom btn-learn">Learn More</a>
         </div>
+        </div>
+        
     </div>
 </div>
 

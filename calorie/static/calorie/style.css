@@ -1,3 +1,10 @@
+body {
+    background: url('/static/assets/images/homee.jpg') no-repeat center center fixed; /* Ensure the image is fixed */
+    background-size: cover;  /* Cover the entire viewport */
+    height: 100vh;  /* Ensure the body takes up the full viewport height */
+    flex-direction: column;  /* Make the body act as a column container */
+    justify-content: space-between;  /* Ensure content is spread out */
+}
 .sidenav {
     height: 100%; /* Full height */
     width: 0; /* Hidden by default */

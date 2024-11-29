@@ -5,12 +5,13 @@
 {% load static %}
 <style>
     body {
-        background: url({% static "assets/images/register.jpg" %});
+        background: url("{% static 'assets/images/register.jpg' %}");
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
     }
 </style>
+
 <div class="registration-container">
     <h1 class="header-title">Create Your Account</h1>
 
@@ -28,6 +29,7 @@
         
         <!-- Username -->
         <div class="form-group">
+        <label class="form-label" style="margin-left: -300px;"><i class="fa-solid fa-user"></i> Username</label>
           <div class="form-field">
               {{ form.username|as_crispy_field }}
           </div>
@@ -35,12 +37,14 @@
 
         <!-- Email -->
         <div class="form-group">
+            <label class="form-label" style="margin-left: -335px;"><i class="fa-solid fa-envelope"></i> Email</label>
             <div class="form-field">
                 {{ form.email|as_crispy_field }}
             </div>
         </div>
         
         <div class="form-group">
+            <label class="form-label" style="margin-left: -360px;"s>Name</label>
             <div class="form-field">
                 {{ form.name|as_crispy_field }}
             </div>
@@ -48,6 +52,7 @@
 
         <!-- Age -->
         <div class="form-group">
+            <label class="form-label" style="margin-left: -370px;"s>Age</label>
             <div class="form-field">
                 {{ form.age|as_crispy_field }}
             </div>
@@ -55,6 +60,7 @@
 
         <!-- Gender -->
         <div class="form-group">
+            <label class="form-label" style="margin-left: -330px;"s><i class="fa-solid fa-person-half-dress"></i> Gender</label>
             <div class="form-field">
                 {{ form.gender|as_crispy_field }}
             </div>
@@ -62,6 +68,7 @@
 
         <!-- Password -->
         <div class="form-group">
+            <label class="form-label" style="margin-left: -310px;"s><i class="fa-solid fa-key"></i> Password</label>
             <div class="form-field">
                 {{ form.password1|as_crispy_field }}
             </div>
@@ -69,6 +76,7 @@
 
         <!-- Confirm Password -->
         <div class="form-group">
+            <label class="form-label" style="margin-left: -240px;"s><i class="fa-solid fa-key"></i> Confirm Password</label>
             <div class="form-field">
                 {{ form.password2|as_crispy_field }}
             </div>

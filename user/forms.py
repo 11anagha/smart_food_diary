@@ -12,3 +12,9 @@ class RegistrationForm(UserCreationForm):
     class Meta:
         model = User  # Ensure this is the correct model
         fields = ["email", "username", "password1", "password2"]
+
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        for field_name, field in self.fields.items():
+            field.label = ""  # Remove label for all fields
+

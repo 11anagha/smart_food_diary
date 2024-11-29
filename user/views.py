@@ -6,7 +6,7 @@ from django.contrib.auth import logout
 from .models import UserProfile
 from django.contrib.auth import authenticate
 from django.contrib import messages
-from django.core.mail import send_mail
+
 # Create your views here.
 def register(request):
     if request.method == "POST":
@@ -41,19 +41,3 @@ def learn_more_view(request):
 
 def contact_view(request):
     return render(request, 'user/contact.html')
-
-def send_message(request):
-    if request.method == 'POST':
-        name = request.POST['name']
-        email = request.POST['email']
-        message = request.POST['message']
-
-        # Send email logic (customize with your email backend)
-        send_mail(
-            subject=f"Message from {name}",
-            message=f"Name: {name}\nEmail: {email}\n\nMessage:\n{message}",
-            from_email=email,
-            recipient_list=['support@smartfooddiary.com'],
-        )
-        messages.success(request, 'Your message has been sent! We will get back to you soon.')
-        return redirect('contact')
