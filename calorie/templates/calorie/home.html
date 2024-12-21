@@ -1,29 +1,47 @@
 {% extends 'calorie/base.html' %}
 {% block content %}
-{% load static %}
-
-<div class="container text-center vh-100 d-flex flex-column justify-content-center align-items-center">
-    <div class="dashboard p-5 shadow rounded">
-        <h1 class="homepage-title">Welcome to the Calorie Tracker!</h1>
-        <p class="homepage-description">
-            Track your meals, analyze their nutritional content, and stay on top of your health goals.
-        </p>
-        <div class="upload-section mt-4">
-            <p>Upload an image to identify food and analyze its nutritional content:</p>
-            <button type="submit" class="btn btn-primary">Upload</button>
+<div class="container-fluid mt-3">
+  <div class="dashboard-row">
+    <!-- Recent Activity -->
+    <div class="col">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title text-center">Recent Activity</h5>
+          <ul class="list-group">
+            <li class="list-group-item">Uploaded: {{ data.class_name }}</li>
+            <li class="list-group-item">Calories Consumed: {{data.calories}} kcal</li>
+          </ul>
+          <a href="#activity" class="btn btn-success w-100 mt-3">View All</a>
         </div>
-        <div class="goal-section mt-5">
-            <h3>Set Your Goals</h3>
-            <div class="form-group">
-                <label for="calorie-goal">Daily Calorie Goal:</label>
-                <input type="number" id="calorie-goal" name="calorie_goal" class="form-control mb-3" placeholder="e.g., 2000" required>
-            </div>
-            <div class="form-group">
-                <label for="nutrient-goal">Daily Nutrient Goal (e.g., Protein in grams):</label>
-                <input type="text" id="nutrient-goal" name="nutrient_goal" class="form-control mb-3" placeholder="e.g., Protein: 50g, Carbs: 250g" required>
-            </div>
-            <button type="submit" class="btn btn-success">Save Goals</button>
-        </div>
+      </div>
     </div>
+
+    <!-- Daily Goals -->
+    <div class="col">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title text-center">Daily Goals</h5>
+          <p>Calories: <strong>{{ daily_goal.calories }}</strong></p>
+          <p>Protein: <strong>{{ daily_goal.protein }}</strong>, Carbs: <strong>{{ daily_goal.carbs }}</strong>, Fats: <strong>{{ daily_goal.fats }}</strong></p>
+          <a href="{% url 'edit_daily_goals' %}" class="btn btn-primary w-100" style="margin-top: 60px;">Edit Goals</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Second Row -->
+  <div class="dashboard-row mt-5">
+    <!-- Nutrition Overview -->
+    <div class="col">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title text-center">Nutrition Overview</h5>
+          <div class="chart-placeholder">
+            Chart Placeholder
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 {% endblock %}
