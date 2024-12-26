@@ -1,7 +1,7 @@
 # **Setup**
 
 ```
-https://github.com/11anagha/smart_food_diary.git
+git clone https://github.com/11anagha/smart_food_diary.git
 cd smart_food_diary
 
 python -m venv env
