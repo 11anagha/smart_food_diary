@@ -1,8 +1,7 @@
 # **Setup**
-
-```
-git clone https://github.com/11anagha/smart_food_diary.git
-cd smart_food_diary
+```bash
+git clone https://github.com/rajnishdev/SmartFood_CalorieCode.git
+cd SmartFood_CalorieCode
 
 python -m venv env
 source env/bin/activate  # On Windows use `source env/Scripts/activate`
