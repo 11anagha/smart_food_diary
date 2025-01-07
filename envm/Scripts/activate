@@ -38,7 +38,7 @@ deactivate () {
 # unset irrelevant variables
 deactivate nondestructive
 
-VIRTUAL_ENV="D:\personal repo\smart_food_diary\envm"
+VIRTUAL_ENV="D:\new grp repo\SmartFood_CalorieCode\envm"
 export VIRTUAL_ENV
 
 _OLD_VIRTUAL_PATH="$PATH"
