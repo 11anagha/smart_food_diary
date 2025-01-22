@@ -1,6 +1,6 @@
 # **Setup**
 ```bash
-git clone https://github.com/rajnishdev/SmartFood_CalorieCode.git
+git clone https://github.com/11anagha/smart_food_diary.git
 cd SmartFood_CalorieCode
 
 python -m venv env
