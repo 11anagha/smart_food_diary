@@ -24,6 +24,7 @@ from django.http import HttpResponse
 from django.template.loader import render_to_string
 import pdfkit
 from django.db.models import Sum
+from django.utils.timezone import localtime
 
 # Create your views here.
 
@@ -197,25 +198,14 @@ def upload_image(request):
             
             NutritionData.objects.create(user=request.user, image=image_instance, class_name=class_name, calories=calories, protein=protein, carbs=carbs, fats=fats,cholestrol=cholestrol, iron=iron, calcium=calcium, sodium=sodium, magnesium=magnesium, phosphorus=phosphorus,zinc=zinc,vitaminb12=vitaminb12, folic_acid=folic_acid )
             
-            # Fetch the daily goal for the user
-            daily_goals = DailyGoal.objects.filter(user=request.user)
-            goal = daily_goals.first().calories if daily_goals.exists() else 0
-
-            # Fetch the nutrition data and calculate the total calories
-            nutrition_data = NutritionData.objects.filter(user=request.user)
-            total_calories = nutrition_data.aggregate(total=Sum('calories'))['total'] or 0
-            
-        
-            if goal <= total_calories:
-                messages.error(request, "Your Daily goal is achieved!")
-            else:
-                messages.success(request, f"You need {goal - total_calories} more calories to achieve your daily goal")
-            
             return redirect('meal_detail')
     else:
         form = ImageUploadForm()
 
     return render(request, 'calorie/upload_image.html', {'form': form})
+
+
+
 def generate_chart(chart_type, labels, values, **kwargs):
     plt.figure()
 
@@ -315,6 +305,8 @@ def meal_detail(request):
         "scatter_chart":scatter_chart,
         "radar_chart": radar_chart,
     })
+
+
 def visualization(request):
     # Check if visualization is available
     if not request.session.get('visualization_available', False):
@@ -398,7 +390,7 @@ def generate_report(request, format='pdf'):
 
     if format == 'pdf':
         # Ensure correct wkhtmltopdf path
-        wkhtmltopdf_path = os.environ.get("pdf_path")
+        wkhtmltopdf_path = r"C:\\Users\\11ana\\Downloads\\wkhtmltox-0.12.6-1.mxe-cross-win64\\wkhtmltox\\bin\\wkhtmltopdf.exe"
         config = pdfkit.configuration(wkhtmltopdf=wkhtmltopdf_path)
 
         # Render HTML template with the user data, daily goals, and nutrition data
